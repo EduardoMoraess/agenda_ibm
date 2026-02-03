@@ -18,6 +18,20 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+//FUNÇÃO PARA ADICIONAR AGENDA/EDIÇÃO DE AGENDA
+function EditAgend() {
+    const Agenda = document.getElementById('agenda');
+
+    Agenda.addEventListener('click', () => {
+        const url = 'https://youtu.be/wRM2djgFKXM?si=CwxOdysrmJNicsdT';
+        const name = 'PopOutAgenda';
+        const specs = 'width=800,height=600,left=200,top=100';
+
+        open(url, name, specs);
+    })
+}
+EditAgend()
+
 // CARREGAR AGENDA SEMANAL
 async function carregarAgenda() {
     const container = document.getElementById('conteudo-agenda');
