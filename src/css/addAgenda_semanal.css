@@ -1,5 +1,38 @@
+@import url(variaveis.css);
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.add{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 300px auto;
+}
+
+.add-agenda{
+    padding: 20px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(237, 137, 6);
+    color: #fff;
+}
+
+.add-agenda:hover{
+    background-color: rgb(68, 237, 6);
+    color: black;
 }
