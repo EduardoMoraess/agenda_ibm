@@ -7,7 +7,11 @@ function alteraAgenda() {
 
         const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
 
-        window.open(url, "_blank");
+        window.open(
+            url, 
+            "popupWhatsapp",
+            "width=1000,height=600,top=200,left=100,resizable=yes,scrollbars=yes"
+        );
     })
 }
 alteraAgenda();
