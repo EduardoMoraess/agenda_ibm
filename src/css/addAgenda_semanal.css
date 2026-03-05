@@ -1,6 +1,6 @@
 @import url(variaveis.css);
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,17 +12,47 @@ body {
     color: var(--text);
     min-height: 100vh;
     overflow-x: hidden;
+    /* Centraliza o conteúdo (login ou agenda) na tela */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.add{
+/* Container do Formulário de Login */
+.formulario {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    background-color: blue;
+    /* Mantendo seu estilo */
+    width: 90%;
+    /* Responsivo em telas pequenas */
+    max-width: 500px;
+    /* Tamanho original em telas grandes */
+    padding: 30px;
+    border-radius: 15px;
+    margin: 20px auto;
+    /* Margem flexível */
+}
+
+/* Área da Agenda (Conteúdo que aparece depois) */
+.add {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 300px auto;
+    width: 100%;
+    margin: 20px auto;
+    /* Removido os 300px fixos que quebravam o mobile */
 }
 
-.add-agenda{
+.add-agenda {
     padding: 20px;
+    width: 90%;
+    max-width: 300px;
     font-size: 1.2rem;
     text-transform: uppercase;
     font-weight: bold;
@@ -30,9 +60,79 @@ body {
     border-radius: 20px;
     background-color: rgb(237, 137, 6);
     color: #fff;
+    cursor: pointer;
+    transition: 0.3s ease;
 }
 
-.add-agenda:hover{
+.add-agenda:hover {
     background-color: rgb(68, 237, 6);
     color: black;
+}
+
+/* Inputs do Formuário */
+input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #000;
+}
+
+.btn-validadao {
+    padding: 12px;
+    width: 100%;
+    max-width: 250px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 30px;
+    background-color: rgb(252, 135, 2);
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-validadao:hover {
+    background-color: greenyellow;
+    color: #000;
+    transform: scale(1.05);
+}
+
+/* Lógica de exibição */
+.sumir {
+    display: none !important;
+}
+
+.mostrar {
+    display: flex !important;
+    /* Flex para manter o alinhamento central */
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* --- MEDIA QUERIES (Ajustes finos para Mobile) --- */
+
+@media (max-width: 480px) {
+    .formulario {
+        padding: 20px;
+        gap: 10px;
+    }
+
+    input {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .btn-validadao,
+    .add-agenda {
+        font-size: 1rem;
+        padding: 15px;
+    }
 }
