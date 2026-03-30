@@ -29,7 +29,7 @@ function formularioLogin() {
 formularioLogin();
 
 //Para alterar a agenda via WPP
-function alteraAgenda() {
+/*function alteraAgenda() {
     const alteracaoAgenda = document.getElementById('add-agenda');
 
     alteracaoAgenda.addEventListener("click", () => {
@@ -45,4 +45,4 @@ function alteraAgenda() {
         );
     })
 }
-alteraAgenda();
+alteraAgenda();*/
